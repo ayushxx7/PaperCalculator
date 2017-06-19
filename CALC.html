@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Calculator
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/CALC.css">
+	<script src="js/jquery.min.js" async></script>
+<body>
+
+<div class="container">
+ <div class="container-fluid"> 
+ 
+  	<select class="form-control" id='optionselector'>
+  
+  		<option disabled="disabled" selected="selected">Select Calculation</option>
+  
+  			<optgroup label="Find Weight(in KGs) for 500 sheets">
+    			<option value="case_one">inches/Gram-Weight</option>
+    			<option value="case_two">centimeters/Gram-weight</option>
+  		</optgroup>
+  
+  			<optgroup label="Find Gram-Weight of 500 sheets">
+    			<option value="case_three">inches/Weight(KG)</option>
+    			<option value="case_four">cms/Weight(KG)</option>
+  			</optgroup>
+  
+  			<optgroup label="Find Total Weight(in KGs) of a reel">
+    			<option value="case_five">GSM/Width(cm)/Length(m)</option>
+	     	</optgroup>
+  
+			<optgroup label="Find length in meter of a reel">
+    			<option value="case_six">Weight(KG)/GSM/Width(cm)
+  			</option>
+
+	</select> 
+ 
+ <div class="container-fluid">
+ 	
+ 	<div id = "case_one"  class="calcoptions sizemod">
+ 
+ 	<h5>1. To find the weight (in Kilograms) of a ream containing 500 sheets of a given size in inches and Gram-Weight.</h5> 
+
+ 	<br>    
+	
+	Length: <input type="number" step="0.01" name="length_in" id="txt_weight" placeholder="Length(inch)" min="0" onkeyup="calculateWeightInInches();">
+	<br><br>
+
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_width" placeholder="Width(inch)" min="0" max='300' onkeyup="calculateWeightInInches();">
+	<br><br>
+
+	GSM: &nbsp;&nbsp;&nbsp;<input type="number" min="5" max="800" step="0.01" name="length_in" id="txt_GSM" placeholder="GSM" onkeyup="calculateWeightInInches();">
+	<br><br>
+
+	Weight: <input type="number" step = "0.01" name="Weight_Kg" id = "txt_Result" readonly="readonly">
+	
+	</div>
+	
+	<div id = "case_two"  class="calcoptions sizemod">
+ 
+ 	<h5>2. To find the weight (in kilograms) of a ream containering 500 
+sheets of a given size in centimeters and gram-weight.</h5> 
+
+ 	<br>    
+	
+	Length: <input type="number" step="0.01" min = "0" name="length_in" id="txt_Lengthincm" placeholder="Length(cm)" onkeyup="calculateWeightInCm()" >
+	<br><br>
+
+	Width: &nbsp;&nbsp;<input type="number" min = "1" max="762" step="0.01" name="width_in" id="txt_widthincm" placeholder="Width(cm)" onkeyup="calculateWeightInCm()">
+	<br><br>
+
+	GSM: &nbsp;&nbsp;&nbsp;<input type="number" min="5" max="800" step="0.01" name="length_in" id="txt_gsm2" placeholder="GSM" onkeyup="calculateWeightInCm()">
+	<br><br>
+
+	Weight: <input type="number" step = "0.01" name="Weight_Kg" id = "txt_Result2"readonly="readonly">
+	
+	</div>
+	
+	<div id = "case_three"  class="calcoptions sizemod">
+ 
+ 	<h5>3. To find the gram-weight of a ream containing 500 sheets of a given size in inches and weight (in kilograms)</h5> 
+
+ 	<br>    
+	
+	Weight: <input type="number" step="0.01" name="length_in" id="txt_WeightPerReam" placeholder="Weight(KG) per ream" min="0" onkeyup="calculateGsmInInches();">
+	<br><br>
+
+	Length: <input type="number" step="0.01" min = "0" name="width_in" id="txt_Lengthininches2" placeholder="Length(inches)" onkeyup="calculateGsmInInches();">
+	<br><br>
+
+	Width: &nbsp;&nbsp;<input type="number" min="0" max='300' step="0.01" name="length_in" id="txt_widthininches2" placeholder="Width(inches)" onkeyup="calculateGsmInInches();">
+	<br><br>
+
+	GSM: &nbsp;&nbsp;&nbsp;<input type="number" step = "0.01" name="Weight_Kg" min="5" max="800" id = "txt_gsm3"  min="5" max="800" readonly="readonly">
+	
+	</div>
+	
+
+
+	<div id = "case_four"  class="calcoptions sizemod">
+ 
+ 	<h5>4. To find the gram-weight of a ream containing 500 sheets of a given size in 
+centimeters and weight (in kilograms).</h5> 
+
+ 	<br>    
+	
+	Weight: <input type="number" step="0.01" name="length_in" id="txt_WeightPerReamCm" placeholder="Weight(KG) per ream" min="0" onkeyup="calculateGsmInCm();">
+	<br><br>
+
+	Length: <input type="number" step="0.01" name="width_in" id="txt_LengthOFReamCm" placeholder="Length(cm)" min="0" onkeyup="calculateGsmInCm();">
+	<br><br>
+
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_WidthOfReamCm" placeholder="Width(cm)" min = "1" max="762" onkeyup="calculateGsmInCm();">
+	<br><br>
+
+	GSM: &nbsp;&nbsp;&nbsp;<input type="number" step = "0.01" name="Weight_Kg" id = "txt_Result4" readonly="readonly"  min="5" max="800">
+	
+	</div>
+	
+
+
+	<div id = "case_five"  class="calcoptions sizemod">
+ 
+ 	<h5>5. To find the total weight (in kilograms) of a reel of a given size, length and gram-weight.</h5> 
+
+ 	<br>    
+	
+	GSM: &nbsp;&nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_gsm5"  min="5" max="800" placeholder="GSM" onkeyup="calculateTotalWeight();">
+	<br><br>
+
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_WidthReelCm" placeholder="Width(cm)" min = "1" max="762" onkeyup="calculateTotalWeight();">
+	<br><br>
+
+	Length: <input type="number" step="0.01" name="length_in" id="txt_LengthReelM" placeholder="Length(m)" min = "0" onkeyup="calculateTotalWeight();">
+	<br><br>
+
+	Weight: <input type="number" step = "0.01" name="Weight_Kg" id = "Txt_Result5" readonly="readonly">
+	
+	</div>
+
+
+
+	<div id = "case_six"  class="calcoptions sizemod">
+ 
+ 	<h5>6. To find the length in meter of a reel of a given size gram-weight and total weight (in kilograms).</h5> 
+
+ 	<br>    
+	
+	Weight: <input type="number" step="0.01" name="length_in" id="txt_ReamWeightInKg" placeholder="Weight of Reel(KG)" onkeyup="calculateLengthInMeter();" min="0">
+	<br><br>
+
+	GSM: &nbsp;&nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_gsm6" placeholder="GSM" onkeyup="calculateLengthInMeter();" min="5" max="800">
+	<br><br>
+
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_ReamWidthInCm" placeholder="Width(cm)"  min = "1" max="762" onkeyup="calculateLengthInMeter();">
+	<br><br>
+
+	Length: <input type="number" step = "0.01" name="Weight_Kg" id = "txt_LenghOfReam" readonly="readonly">
+	
+	</div>
+	
+ </div>																	
+    
+ </div>	
+</div>
+
+
+<!-- <div class="container">
+	<div class="container-fluid">
+<div>	
+Length: <input type="number" step = '0.01' name="length">
+</div>	
+<div>	
+Length: <input type="number" step = '0.01' name="length">
+</div>	
+
+<div>	
+Length: <input type="number" step = '0.01' name="length">
+</div>	
+
+
+	</div>
+</div>
+ -->
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script> 
+ <script src="js/CALC.js"></script> 
+ 
+</body>
+</html>
