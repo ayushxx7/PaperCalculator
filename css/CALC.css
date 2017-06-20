@@ -33,9 +33,15 @@ input[type='number'] {
 @media only screen and (max-width: 900px) {
   .sizemod {	
     display: none;
-     
-
   }
+
+}
+
+@media only screen and (min-width: 900px)
+{
+ 	.extraSpace {
+ 		display: none;
+ 	}
 }
 
 @media (min-width: 858px) {
