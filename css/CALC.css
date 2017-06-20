@@ -29,7 +29,15 @@ input[type='number'] {
 @media only screen and (max-width: 900px) {
   .sizemod {	
     display: none;
-    optgroup { font-size:8px; }
+     
+    select {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        /*font-style: italic;*/	
+    }
+    select#fixed {
+        -webkit-appearance: none;
+    }
   }
 }
 
@@ -63,6 +71,7 @@ input[type='number'] {
     }
 }
 
+   
 /*
 #text_container
     {
