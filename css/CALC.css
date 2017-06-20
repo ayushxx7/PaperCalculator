@@ -30,14 +30,7 @@ input[type='number'] {
   .sizemod {	
     display: none;
      
-    select {
-        font-family: Arial, sans-serif;
-        font-size: 10px;
-        /*font-style: italic;*/	
-    }
-    select#fixed {
-        -webkit-appearance: none;
-    }
+    
   }
 }
 
@@ -71,7 +64,14 @@ input[type='number'] {
     }
 }
 
-   
+select {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        /*font-style: italic;*/	
+    }
+    select#fixed {
+        -webkit-appearance: none;
+    }   
 /*
 #text_container
     {
