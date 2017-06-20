@@ -30,7 +30,7 @@ input[type='number'] {
   .sizemod {	
     display: none;
      
-    
+
   }
 }
 
@@ -71,7 +71,15 @@ select {
     }
     select#fixed {
         -webkit-appearance: none;
-    }   
+    }
+
+textarea {
+    width: 20px;
+};
+
+input[type="number"] {
+    width: 20px;
+};       
 /*
 #text_container
     {
