@@ -73,17 +73,17 @@ function calculateWeightInInches() {
            var Width = document.getElementById("txt_WidthOfReamCm").value;
            var calculate = (Weight * 20000) / (Length * Width);
            var result = document.getElementById("txt_Result4");
-           result.value = calculate.toFixed(2);	
+        //   result.value = calculate.toFixed(2);	
 
-     //       if(calculate < 0 || Width > 762 || width < 1)
-     //       {
-     //       	result.value = 0;
-     //       }
+            if(calculate < 0 || Width > 762 || Width < 1 || Length > 251.46 || Length < 2.54)
+            {
+            	result.value = 0;
+            }
 
-     //       else
-     //       {	
-     //       	result.value = calculate.toFixed(2);
-		   // }
+            else
+            {	
+            	result.value = calculate.toFixed(2);
+		    }
        }
        function calculateTotalWeight() {
            var GSM = document.getElementById("txt_gsm5").value;
@@ -91,16 +91,16 @@ function calculateWeightInInches() {
            var Width = document.getElementById("txt_WidthReelCm").value;
            var calculate = GSM * Width * Length / 100000;
            var result = document.getElementById("Txt_Result5");
-           result.value = calculate.toFixed(2);
-     //       if(calculate < 0 || width > 762 || width < 1 || GSM < 5 || GSM > 800)
-     //       {
-     //       	result.value = 0;
-     //       }
+          // result.value = calculate.toFixed(2);
+            if(calculate < 0 || Width > 762 || Width < 1 || GSM < 5 || GSM > 800)
+            {
+            	result.value = 0;
+            }
 
-     //       else
-     //       {	
-     //       	result.value = calculate.toFixed(2);
-		   // }
+            else
+            {	
+            	result.value = calculate.toFixed(2);
+		    }
        }
        function calculateLengthInMeter() {
            var GSM = document.getElementById("txt_gsm6").value;
@@ -108,16 +108,16 @@ function calculateWeightInInches() {
            var Width = document.getElementById("txt_ReamWidthInCm").value;
            var calculate = (Weight * 100000) / GSM * Width;
            var result = document.getElementById("txt_LenghOfReam");
-           result.value = calculate.toFixed(2);
-     //       if(calculate < 0 || width > 762 || width < 1 || GSM < 5 || GSM > 800)
-     //       {
-     //       	result.value = 0;
-     //       }
+          // result.value = calculate.toFixed(2);
+            if(calculate < 0 || Width > 762 || Width < 1 || GSM < 5 || GSM > 800)
+            {
+            	result.value = 0;
+            }
 
-     //       else
-     //       {	
-     //       	result.value = calculate.toFixed(2);
-		   // }
+            else
+            {	
+            	result.value = calculate.toFixed(2);
+		    }
        }
 
 // // var e = document.getElementById("optionselector");
