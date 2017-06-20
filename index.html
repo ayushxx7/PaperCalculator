@@ -49,13 +49,13 @@
  	<h5>1. To find the weight (in <b>Kilograms</b>) of a ream containing 500 sheets of a given size in <b>inches</b> and <b>Gram-Weight.</b></h5> 
  	<br>    
 	
-	Length: <input type="number" step="0.01" name="length_in" id="txt_weight" placeholder="Length(inch)" min="0" onkeyup="calculateWeightInInches();">
+	Length: <input type="number" step="0.01" name="length_in" id="txt_weight" placeholder="Length(inch)" min="1" max = "99" onkeyup="calculateWeightInInches();">inch
 	<br><br>
 
-	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_width" placeholder="Width(inch)" min="0" max='300' onkeyup="calculateWeightInInches();">
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_width" placeholder="Width(inch)" min="1" max='300' onkeyup="calculateWeightInInches();">inch
 	<br><br>
 
-	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" min="5" max="800" step="0.01" name="length_in" id="txt_GSM" placeholder="GSM" onkeyup="calculateWeightInInches();">
+	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" 	min="5" max="800" step="0.01" name="length_in" id="txt_GSM" placeholder="GSM" onkeyup="calculateWeightInInches();">
 	<br><br>
 
 	Weight: <input type="number" step = "0.01" name="Weight_Kg" id = "txt_Result" readonly="readonly">KG
@@ -69,10 +69,10 @@ sheets of a given size in <b>centimeters</b> and <b>gram-weight</b>.</h5>
 
  	<br>    
 	
-	Length: <input type="number" step="0.01" min = "0" name="length_in" id="txt_Lengthincm" placeholder="Length(cm)" onkeyup="calculateWeightInCm()" >
+	Length: <input type="number" step="0.01" min = "3" max="252" name="length_in" id="txt_Lengthincm" placeholder="Length(cm)" onkeyup="calculateWeightInCm()" >cm
 	<br><br>
 
-	Width: &nbsp;&nbsp;<input type="number" min = "1" max="762" step="0.01" name="width_in" id="txt_widthincm" placeholder="Width(cm)" onkeyup="calculateWeightInCm()">	
+	Width: &nbsp;&nbsp;<input type="number" min = "1" max="762" step="0.01" name="width_in" id="txt_widthincm" placeholder="Width(cm)" onkeyup="calculateWeightInCm()">cm	
 	<br><br>
 
 	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" min="5" max="800" step="0.01" name="length_in" id="txt_gsm2" placeholder="GSM" onkeyup="calculateWeightInCm()">
@@ -88,13 +88,13 @@ sheets of a given size in <b>centimeters</b> and <b>gram-weight</b>.</h5>
 
  	<br>    
 	
-	Weight: <input type="number" step="0.01" name="length_in" id="txt_WeightPerReam" placeholder="Weight(KG) per ream" min="0" onkeyup="calculateGsmInInches();">
+	Weight: <input type="number" step="0.01" name="length_in" id="txt_WeightPerReam" placeholder="Weight(KG) per ream" min="0" onkeyup="calculateGsmInInches();">KG
 	<br><br>
 
-	Length: <input type="number" step="0.01" min = "0" name="width_in" id="txt_Lengthininches2" placeholder="Length(inches)" onkeyup="calculateGsmInInches();">
+	Length: <input type="number" step="0.01" min = "0" name="width_in" id="txt_Lengthininches2" placeholder="Length(inches)" onkeyup="calculateGsmInInches();">inch
 	<br><br>
 
-	Width: &nbsp;&nbsp;<input type="number" min="0" max='300' step="0.01" name="length_in" id="txt_widthininches2" placeholder="Width(inches)" onkeyup="calculateGsmInInches();">
+	Width: &nbsp;&nbsp;<input type="number" min="0" max='300' step="0.01" name="length_in" id="txt_widthininches2" placeholder="Width(inches)" onkeyup="calculateGsmInInches();">inch
 	<br><br>
 
 	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" step = "0.01" name="Weight_Kg" min="5" max="800" id = "txt_gsm3"  min="5" max="800" readonly="readonly">
@@ -110,13 +110,13 @@ sheets of a given size in <b>centimeters</b> and <b>gram-weight</b>.</h5>
 
  	<br>    
 	
-	Weight: <input type="number" step="0.01" name="length_in" id="txt_WeightPerReamCm" placeholder="Weight(KG) per ream" min="0" onkeyup="calculateGsmInCm();">
+	Weight: <input type="number" step="0.01" name="length_in" id="txt_WeightPerReamCm" placeholder="Weight(KG) per ream" min="0" onkeyup="calculateGsmInCm();">KG
 	<br><br>
 
-	Length: <input type="number" step="0.01" name="width_in" id="txt_LengthOFReamCm" placeholder="Length(cm)" min="0" onkeyup="calculateGsmInCm();">
+	Length: <input type="number" step="0.01" name="width_in" id="txt_LengthOFReamCm" placeholder="Length(cm)" min="0" onkeyup="calculateGsmInCm();">cm
 	<br><br>
 
-	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_WidthOfReamCm" placeholder="Width(cm)" min = "1" max="762" onkeyup="calculateGsmInCm();">
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_WidthOfReamCm" placeholder="Width(cm)" min = "1" max="762" onkeyup="calculateGsmInCm();">cm
 	<br><br>
 
 	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" step = "0.01" name="Weight_Kg" id = "txt_Result4" readonly="readonly"  min="5" max="800">
@@ -134,10 +134,10 @@ sheets of a given size in <b>centimeters</b> and <b>gram-weight</b>.</h5>
 	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" step="0.01" name="length_in" id="txt_gsm5"  min="5" max="800" placeholder="GSM" onkeyup="calculateTotalWeight();">
 	<br><br>
 
-	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_WidthReelCm" placeholder="Width(cm)" min = "1" max="762" onkeyup="calculateTotalWeight();">
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_WidthReelCm" placeholder="Width(cm)" min = "1" max="762" onkeyup="calculateTotalWeight();">cm
 	<br><br>
 
-	Length: <input type="number" step="0.01" name="length_in" id="txt_LengthReelM" placeholder="Length(m)" min = "0" onkeyup="calculateTotalWeight();">
+	Length: <input type="number" step="0.01" name="length_in" id="txt_LengthReelM" placeholder="Length(m)" min = "0" onkeyup="calculateTotalWeight();">m
 	<br><br>
 
 	Weight: <input type="number" step = "0.01" name="Weight_Kg" id = "Txt_Result5" readonly="readonly">KG
@@ -152,18 +152,20 @@ sheets of a given size in <b>centimeters</b> and <b>gram-weight</b>.</h5>
 
  	<br>    
 	
-	Weight: <input type="number" step="0.01" name="length_in" id="txt_ReamWeightInKg" placeholder="Weight of Reel(KG)" onkeyup="calculateLengthInMeter();" min="0">
+	Weight: <input type="number" step="0.01" name="length_in" id="txt_ReamWeightInKg" placeholder="Weight of Reel(KG)" onkeyup="calculateLengthInMeter();" min="0">KG
 	<br><br>
 
 	GSM: &nbsp;&nbsp;&nbsp;<span class="extraSpace">&nbsp;</span><input type="number" step="0.01" name="width_in" id="txt_gsm6" placeholder="GSM" onkeyup="calculateLengthInMeter();" min="5" max="800">
 	<br><br>
 
-	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_ReamWidthInCm" placeholder="Width(cm)"  min = "1" max="762" onkeyup="calculateLengthInMeter();">
+	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="length_in" id="txt_ReamWidthInCm" placeholder="Width(cm)"  min = "1" max="762" onkeyup="calculateLengthInMeter();">cm
 	<br><br>
 
 	Length: <input type="number" step = "0.01" name="Weight_Kg" id = "txt_LenghOfReam" readonly="readonly">Meters
 	<br><br>
 	</div>
+<!-- 
+	<input type="text" name="year" placeholder = "testing" style="width:7em;padding-left:1.5em;font:inherit"><span style="margin-left:-1.7em;margin-right:10em;">KG</span> -->
 	
  </div>																	
     
