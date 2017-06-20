@@ -26,7 +26,10 @@ input[type='number'] {
     -moz-appearance:textfield;
 }
 
-.sizemod
-{
-	display: none;
+@media screen and (max-width: 900px) {
+  .sizemod {
+    display: none;
+
+  }
 }
+
