@@ -158,7 +158,7 @@ function calculateWeightInInches() {
            var GSM = document.getElementById("txt_gsm5").value;
            var Length = document.getElementById("txt_LengthReelM").value;
            var Width = document.getElementById("txt_WidthReelCm").value;
-           var calculate = GSM * Width * Length / 100000;
+           var calculate = (GSM * Width * Length) / 100000;
            var result = document.getElementById("Txt_Result5");
           // result.value = calculate.toFixed(2);
             if(calculate < 0 || Width > 762 || Width < 1 || GSM < 5 || GSM > 800)
@@ -175,7 +175,7 @@ function calculateWeightInInches() {
            var GSM = document.getElementById("txt_gsm6").value;
            var Weight =document.getElementById("txt_ReamWeightInKg").value;
            var Width = document.getElementById("txt_ReamWidthInCm").value;
-           var calculate = (Weight * 100000) / GSM * Width;
+           var calculate = (Weight * 100000) / (GSM * Width);
            var result = document.getElementById("txt_LenghOfReam");
           // result.value = calculate.toFixed(2);
             if(calculate < 0 || Width > 762 || Width < 1 || GSM < 5 || GSM > 800)
