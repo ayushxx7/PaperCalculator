@@ -9,9 +9,9 @@ $(function() {
 function moveUp() {
 	if($(window).width() < 900)
 	{
-		// var elmnt = document.getElementById("txt_Result");
-		// elmnt.scrollIntoView(); 
-		scrollWin(0,-50);
+		var elmnt = document.getElementById("txt_Result");
+		elmnt.scrollIntoView(); 
+		//scrollWin(0,-50);
 	}
 }
 function calculateWeightInInches() {
