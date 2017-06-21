@@ -16,7 +16,7 @@
 
 <div class="container">
  <div class="container-fluid"> 
- <div class="jumbotron"><h1>Paper Calculator</h1></div>
+ <div class=""><h2 style="text-align: center;">Paper Calculator</h2></div>
  
   	<select class="form-control" id='optionselector'>
   
@@ -43,13 +43,17 @@
 	</select> 
  
  <div class="container-fluid">
- 	
+
  	<div id = "case_one"  class="calcoptions sizemod">
  
  	<h5>1. To find the weight (in <b>Kilograms</b>) of a ream containing 500 sheets of a given size in <b>inches</b> and <b>Gram-Weight.</b></h5> 
  	<br>    
-	
-	Length: <input type="number" step="0.01" name="length_in" id="txt_weight" placeholder="Length(inch)" min="1" max = "99" onkeyup="calculateWeightInInches();">inch
+
+ 	<div class="row">
+ 	<div class="col-md-6">
+
+
+	Length: <input type="number" step="0.01" name="length_in" id="txt_weight" placeholder="Length(inch)" min="1" max = "99" onkeyup="calculateWeightInInches();" onClick="document.getElementById('txt_Result').scrollIntoView();">inch
 	<br><br>
 
 	Width: &nbsp;&nbsp;<input type="number" step="0.01" name="width_in" id="txt_width" placeholder="Width(inch)" min="1" max='300' onkeyup="calculateWeightInInches();">inch
@@ -60,8 +64,24 @@
 
 	Weight: <input type="number" step = "0.01" name="Weight_Kg" id = "txt_Result" readonly="readonly">KG
 	<br><br>
-	</div>
 	
+
+	</div>
+	<div class="col-md-6">
+		<p id="err_1" style="display: none;">
+		
+		Valid Range: <br>
+		L = 1 to 99 inch <br>
+		W = 1 to 99 inch <br>
+		GSM = 5 to 800 <br><br>
+
+		Formula: (Length * width * GSM) / 3100			 
+
+		</p>
+	</div>
+	</div>
+	</div>
+
 	<div id = "case_two"  class="calcoptions sizemod">
  
  	<h5>2. To find the weight (in <b>kilograms</b>) of a ream containering 500 

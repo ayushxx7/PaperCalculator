@@ -19,15 +19,18 @@ function calculateWeightInInches() {
            // 	document.getElementById('err').innerHTML = 'Incorrect Length!';
            // }
 
+           error = document.getElementById('err_1');
 
            if(calculate < 0 || width > 300 || width < 1 || GSM < 5 || GSM > 800 || Length < 1 || Length > 99)
            {
            	result.value = 0;
+           	error.style.display = 'block'; 
            }
 
            else
            {	
            	result.value = calculate.toFixed(2);
+           	error.style.display = 'none';
 		   }       
        }
 
@@ -40,9 +43,11 @@ function calculateWeightInInches() {
            var calculate = (Length * width * GSM) / 20000;
            var result = document.getElementById("txt_Result2");
            
+          // document.write(error.innerHTML);
+
            if(calculate < 0 || width > 762 || width < 2.54 || GSM < 5 || GSM > 800 || Length > 251.46 || Length < 1)
            {
-           	result.value = 0;
+           	result.value = 0;	
            }
 
            else
