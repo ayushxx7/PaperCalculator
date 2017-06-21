@@ -6,6 +6,12 @@ $(function() {
         });
     });
 	
+//var delayMillis = 1000; //1 second
+
+// setTimeout(function() {
+//   //your code to be executed after 1 second
+// }, delayMillis);
+
 function moveUp() {
 	if($(window).width() < 900)
 	{
@@ -14,6 +20,57 @@ function moveUp() {
 		//scrollWin(0,-50);
 	}
 }
+
+
+function moveUp2() {
+	if($(window).width() < 900)
+	{
+		var elmnt = document.getElementById("txt_Result2");
+		elmnt.scrollIntoView(); 
+		//scrollWin(0,-50);
+	}
+}
+
+function moveUp3() {
+	if($(window).width() < 900)
+	{
+		var elmnt = document.getElementById("txt_gsm3");
+		elmnt.scrollIntoView(); 
+		//scrollWin(0,-50);
+	}
+}
+
+
+function moveUp4() {
+	if($(window).width() < 900)
+	{
+		var elmnt = document.getElementById("txt_Result4");
+		elmnt.scrollIntoView(); 
+		//scrollWin(0,-50);
+	}
+}
+
+
+function moveUp5() {
+	if($(window).width() < 900)
+	{
+		var elmnt = document.getElementById("txt_Result5");
+		elmnt.scrollIntoView(); 
+		//scrollWin(0,-50);
+	}
+}
+
+
+function moveUp6() {
+	if($(window).width() < 900)
+	{
+		var elmnt = document.getElementById("txt_LenghOfReam");
+		elmnt.scrollIntoView(); 
+		//scrollWin(0,-50);
+	}
+}
+
+
 function calculateWeightInInches() {
            var Length = document.getElementById("txt_weight").value;
            var width = document.getElementById("txt_width").value;
