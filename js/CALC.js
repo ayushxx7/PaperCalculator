@@ -16,7 +16,7 @@ function moveUp() {
 	if($(window).width() < 900)
 	{
 		var elmnt = document.getElementById("txt_Result");
-		elmnt.scrollIntoView(); 
+		elmnt.scrollIntoView({block: "end", behavior: "smooth"}); 
 		//scrollWin(0,-50);
 	}
 }
@@ -26,7 +26,7 @@ function moveUp2() {
 	if($(window).width() < 900)
 	{
 		var elmnt = document.getElementById("txt_Result2");
-		elmnt.scrollIntoView(); 
+		elmnt.scrollIntoView({block: "end", behavior: "smooth"}); 
 		//scrollWin(0,-50);
 	}
 }
@@ -35,7 +35,7 @@ function moveUp3() {
 	if($(window).width() < 900)
 	{
 		var elmnt = document.getElementById("txt_gsm3");
-		elmnt.scrollIntoView(); 
+		elmnt.scrollIntoView({block: "end", behavior: "smooth"}); 
 		//scrollWin(0,-50);
 	}
 }
@@ -45,7 +45,7 @@ function moveUp4() {
 	if($(window).width() < 900)
 	{
 		var elmnt = document.getElementById("txt_Result4");
-		elmnt.scrollIntoView(); 
+		elmnt.scrollIntoView({block: "end", behavior: "smooth"}); 
 		//scrollWin(0,-50);
 	}
 }
@@ -54,8 +54,8 @@ function moveUp4() {
 function moveUp5() {
 	if($(window).width() < 900)
 	{
-		var elmnt = document.getElementById("txt_Result5");
-		elmnt.scrollIntoView(); 
+		var elmnt = document.getElementById("Txt_Result5");
+		elmnt.scrollIntoView({block: "end", behavior: "smooth"}); 
 		//scrollWin(0,-50);
 	}
 }
@@ -65,7 +65,7 @@ function moveUp6() {
 	if($(window).width() < 900)
 	{
 		var elmnt = document.getElementById("txt_LenghOfReam");
-		elmnt.scrollIntoView(); 
+		elmnt.scrollIntoView({block: "end", behavior: "smooth"}); 
 		//scrollWin(0,-50);
 	}
 }
