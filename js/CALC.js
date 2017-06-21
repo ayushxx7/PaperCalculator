@@ -6,7 +6,14 @@ $(function() {
         });
     });
 	
-
+function moveUp() {
+	if($(window).width() < 900)
+	{
+		// var elmnt = document.getElementById("txt_Result");
+		// elmnt.scrollIntoView(); 
+		scrollWin(0,-50);
+	}
+}
 function calculateWeightInInches() {
            var Length = document.getElementById("txt_weight").value;
            var width = document.getElementById("txt_width").value;
@@ -30,7 +37,7 @@ function calculateWeightInInches() {
            else
            {	
            	result.value = calculate.toFixed(2);
-           	error.style.display = 'none';
+           	error.style.display = 'none';	
 		   }       
        }
 
